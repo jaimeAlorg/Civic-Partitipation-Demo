@@ -111,6 +111,9 @@ class _HomeState extends State<Home> {
                 height: 200.0,
               ),
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10)),
                 image: DecorationImage(
                     image: NetworkImage(
                       'https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg',
