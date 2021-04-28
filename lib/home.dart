@@ -24,9 +24,9 @@ class _HomeState extends State<Home> {
           Padding(
             padding: EdgeInsets.only(right: 10),
             child: CircleAvatar(
-              backgroundColor: Colors.black,
-              backgroundImage: NetworkImage(
-                  'https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg'),
+              foregroundColor: Colors.black12,
+              backgroundColor: Colors.white,
+              child: Icon(Icons.person_rounded),
               radius: 20,
             ),
           )
