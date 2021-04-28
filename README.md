@@ -1,4 +1,4 @@
-# my_app
+# Civic Partitipation Demo
 
 A new Flutter project.
 
