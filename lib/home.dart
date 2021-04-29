@@ -37,8 +37,14 @@ class _HomeState extends State<Home> {
         children: <Widget>[
           Padding(
               padding: EdgeInsets.only(top: 10),
-              child:
-                  Column(children: [myTags(), SizedBox(height: 10), myCard()])),
+              child: Column(children: [
+                myTags(),
+                SizedBox(height: 10),
+                myCard(),
+                SizedBox(height: 30),
+                myCard(),
+                SizedBox(height: 40),
+              ])),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
