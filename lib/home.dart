@@ -129,8 +129,8 @@ class _HomeState extends State<Home> {
               child: Stack(
                 children: [
                   new Positioned(
-                      right: 5,
-                      top: 5,
+                      right: 10,
+                      top: 10,
                       child: CircleAvatar(
                         backgroundColor: Colors.white,
                         child: Padding(
