@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/theme.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -40,15 +41,15 @@ class _HomeState extends State<Home> {
               child: Column(children: [
                 myTags(),
                 SizedBox(height: 10),
-                myCard(),
+                myCard('Fix the road in Merenlahdentie'),
                 SizedBox(height: 30),
-                myCard(),
+                myCard('Test'),
                 SizedBox(height: 40),
               ])),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: defaultTheme.bottomAppBarColor,
         currentIndex: 0,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.white,
@@ -73,25 +74,25 @@ class _HomeState extends State<Home> {
         children: [
           Chip(
             label: Text('All', style: TextStyle(color: Colors.white)),
-            backgroundColor: Colors.lightBlue,
+            backgroundColor: defaultTheme.primaryColor,
             elevation: 5,
             visualDensity: VisualDensity(horizontal: -2, vertical: -2),
           ),
           Chip(
             label: Text('Petition', style: TextStyle(color: Colors.white)),
-            backgroundColor: Colors.purple,
+            backgroundColor: defaultTheme.accentColor,
             elevation: 5,
             visualDensity: VisualDensity(horizontal: -2, vertical: -2),
           ),
           Chip(
             label: Text('Survey', style: TextStyle(color: Colors.white)),
-            backgroundColor: Colors.lightBlue,
+            backgroundColor: defaultTheme.primaryColor,
             elevation: 5,
             visualDensity: VisualDensity(horizontal: -2, vertical: -2),
           ),
           Chip(
             label: Text('Volunteering', style: TextStyle(color: Colors.white)),
-            backgroundColor: Colors.lightBlue,
+            backgroundColor: defaultTheme.primaryColor,
             elevation: 5,
             visualDensity: VisualDensity(horizontal: -2, vertical: -2),
           ),
@@ -100,7 +101,8 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Card myCard() {
+  Card myCard(text) {
+
     return Card(
       elevation: 10,
       shadowColor: Colors.black,
@@ -127,12 +129,18 @@ class _HomeState extends State<Home> {
               child: Stack(
                 children: [
                   new Positioned(
-                      right: 5,
-                      top: 2,
-                      child: new Icon(
-                        Icons.favorite_border_outlined,
-                        color: Colors.red,
-                        size: 40,
+                      right: 10,
+                      top: 10,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: Padding(
+                          padding: EdgeInsets.all(5),
+                          child: new Icon(
+                            Icons.favorite_border_outlined,
+                            color: Colors.red,
+                            size: 30,
+                          ),
+                        ),
                       )),
                 ],
               )),
@@ -142,10 +150,10 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Test",
+                    text,
                     style: TextStyle(
                         fontSize: 30,
-                        color: Colors.lightBlue,
+                        color: defaultTheme.primaryColor,
                         fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 25),
@@ -161,7 +169,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Icon(
                         Icons.message,
-                        color: Colors.lightBlue,
+                        color: defaultTheme.primaryColor,
                         size: 23,
                       ),
                       SizedBox(width: 3),
@@ -177,13 +185,13 @@ class _HomeState extends State<Home> {
                     children: [
                       Text("Lappeenranta",
                           style:
-                              TextStyle(color: Colors.lightBlue, fontSize: 14)),
+                              TextStyle(color: defaultTheme.primaryColor, fontSize: 14)),
                       Spacer(),
                       Chip(
                         label: Text('Petition',
                             style:
                                 TextStyle(color: Colors.white, fontSize: 14)),
-                        backgroundColor: Colors.purple,
+                        backgroundColor: defaultTheme.accentColor,
                         visualDensity:
                             VisualDensity(horizontal: -4, vertical: -4),
                       ),
