@@ -41,9 +41,9 @@ class _HomeState extends State<Home> {
               child: Column(children: [
                 myTags(),
                 SizedBox(height: 10),
-                myCard(),
+                myCard('Fix the road in Merenlahdentie'),
                 SizedBox(height: 30),
-                myCard(),
+                myCard('Test'),
                 SizedBox(height: 40),
               ])),
         ],
@@ -101,7 +101,8 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Card myCard() {
+  Card myCard(text) {
+
     return Card(
       elevation: 10,
       shadowColor: Colors.black,
@@ -149,7 +150,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Test",
+                    text,
                     style: TextStyle(
                         fontSize: 30,
                         color: defaultTheme.primaryColor,
