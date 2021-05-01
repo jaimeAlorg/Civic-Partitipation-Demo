@@ -129,11 +129,17 @@ class _HomeState extends State<Home> {
                 children: [
                   new Positioned(
                       right: 5,
-                      top: 2,
-                      child: new Icon(
-                        Icons.favorite_border_outlined,
-                        color: Colors.red,
-                        size: 40,
+                      top: 5,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: Padding(
+                          padding: EdgeInsets.all(5),
+                          child: new Icon(
+                            Icons.favorite_border_outlined,
+                            color: Colors.red,
+                            size: 30,
+                          ),
+                        ),
                       )),
                 ],
               )),
